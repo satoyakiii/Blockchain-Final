@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSFund</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>RSFund</h1>
+        <button id="connectBtn" onclick="connectWallet()">Connect Wallet</button>
+    </header>
+
+    <section class="hero">
+        <h2>Fund Research</h2>
+        <p>Decentralized scholarship funding platform</p>
+    </section>
+
+    <!-- Balance -->
+    <section class="balances">
+        <div class="balance-card">
+            <span>ETH Balance:</span>
+            <span id="ethBalance">0 ETH</span>
+        </div>
+        <div class="balance-card">
+            <span>RST Tokens:</span>
+            <span id="tokenBalance">0 RST</span>
+        </div>
+    </section>
+
+    <!-- Create Project Button -->
+    <section class="create">
+        <button onclick="createProject()" class="create-btn">+ Create New Project</button>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects">
+        <h3>Active Projects</h3>
+        <div id="projectsList"></div>
+    </section>
+
+    <footer>
+        <p>Research Scholarship Fund</p>
+    </footer>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
